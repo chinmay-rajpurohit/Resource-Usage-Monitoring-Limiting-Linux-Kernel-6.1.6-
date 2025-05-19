@@ -15,15 +15,24 @@ sys_deregister(pid) – Remove a process from monitoring.
 
 ⚙️ How to Apply the Patch (Linux Kernel 6.1.6)
 
+### ⚙️ How to Apply the Patch (Linux Kernel 6.1.6)
+
+```bash
+# Download and extract the kernel source
 wget https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.1.6.tar.xz
 tar -xf linux-6.1.6.tar.xz
 cd linux-6.1.6
+
+# Apply the patch
 patch -p1 < /path/to/your_patch_file.patch
+
+# Build and install
 make defconfig
 make -j$(nproc)
 sudo make modules_install
 sudo make install
 reboot
+
 
 
 🧪 Testing
